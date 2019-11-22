@@ -1,0 +1,193 @@
+/* LAYOUT PARA LEITURA DE DADOS DA PME */
+DATA PMENOVA;
+INFILE 'D:\PMENOVA.TXT' LRECL=490 MISSOVER;
+INPUT
+@00001	V035	    2.	/* RM	*/
+@00003	V040	    8.	/* Número de controle	*/
+@00011	V050	    5.	/* Número de série	*/
+@00016	V055	    1.	/* Semana	*/
+@00017	V060	   $1.	/* Painel 	*/
+@00018	V063	    1.	/* Grupo rotacional	*/
+@00019	V070	    2.	/* Mês da Pesquisa	*/
+@00021	V075	    4.	/* Ano da pesquisa	*/
+@00025	V072        1.	/* Número da pesquisa no domicílio	*/
+@00026	V104	    1.	/* 4 - Tipo de entrevista	*/
+@00027	V105	    1.	/* 5 - Espécie do domicílio	*/
+@00028	V106	    3.	/* Número de setores selecionados	*/
+@00031	V107	   13.11	/* Probabilidade do setor	*/
+@00044	V108	   15.6	/* Intervalo de Seleção do domicílio	*/
+@00059	V109	    4.	/* Total de domicílio selecionado no setor	  					*/
+@00063	V110	    6.	/* Total de domicílio listado no setor	*/
+@00069	V111	    4.	/* Fração de amostragem	*/
+@00073	V112	    6.	/* Strat	*/
+@00079	V113	    5.	/* PSU	*/
+@00084	V114	    9.	/* Projeção de população	*/
+@00093	V115	    9.2	/* Salário Mínimo	*/
+@00102	V201 	    2.	/* Número de ordem	*/
+@00104	V203	    1.	/* Sexo	*/
+@00105	V204	    2.	/* Dia de nascimento	*/
+@00107	V214	    2.	/* Mês de nascimento	*/
+@00109	V224	    4.	/* Ano de nascimento	*/
+@00113	V234	    4.	/* Idade calculada	*/
+@00117	V205	    1.	/* Condição no domicílio	*/
+@00118	V206        1.	/* Condição na família	*/
+@00119	V207	    1.	/* Número da família	*/
+@00120	V208	    1.	/* Cor ou raça 	*/
+@00121	V209	    2.	/* Total de moradores	*/
+@00123	V210	    2.	/* Total de moradores de 10 anos ou mais 	*/
+@00125	V211	    7.1	/* Pesocor1	*/
+@00132	V215	    7.1	/* Pesoexp1	*/
+@00139	V218	    10.	/* Espaço em branco com 10 posições	*/
+@00149	V301	     1.	/* 1 - ... sabe ler e escrever?	*/
+@00150	V302	     1.	/* 2 -  ... freqüenta escola?	*/
+@00151	V303	     2.	/* 3 - Qual é o curso que ... freqüenta?	*/
+@00153	V304	     1.	/* 4 - Este curso que ... freqüenta é seriado? */
+@00154	V305	     1.	/* 5 - Qual é a série que ... freqüenta neste 						curso?	*/
+@00155	V306	     1.	/* 6 - Anteriormente ... freqüentou escola?	*/
+@00156	V307	     2.	/* 7 - Qual foi o curso de grau mais elevado que ... freqüentou anteriormente?	*/
+@00158	V308	     1.	/* 8 - Este curso que ... freqüentou anteriormente era seriado?	*/
+@00159	V309         1.	/* 9 - ... concluiu, com aprovação pelo menos a primeira série deste curso que freqüentou 						anteriormente? 	*/
+@00160	V310	     1.	/* 10 - Qual foi a última série que ...concluiu, com aprovação, neste curso que freqüentou 						anteriormente?	*/
+@00161	V311	     1.	/*11 - ... concluiu este curso que freqüentou anteriormente?	*/
+@00162	V312         1.	/* 12 - ... concluiu algum curso de qualificação profissional?	*/
+@00163	V313	     1.	/* 13 - ... freqüenta curso de  qualificação profissional?	*/
+@00164	V314	     1.	/* 14 - Qual foi o nível de escolaridade exigido para   ... poder freqüentar este curso de 						qualificação   profissional? 	*/
+@00165	V401	     1.	/*1 - Na semana de ../../.. a ../../.. (semana de referência), ...trabalhou, durante pelo menos 1 					hora, em alguma atividade remunerada em dinheiro, 					produto, mercadorias ou benefícios?	*/
+@00166	V402	     1.	/* 2 - Na semana de ../../.. a  ../../.. (semana de referência),... exerceu, durante pelo menos 1 					hora, algum trabalho sem remuneração, em ajuda na 					atividade remunerada de pessoa que morava no 						domicílio?	*/
+@00167	V403	     1.	/* 3-Na semana de ../../.. a ../../.. (semana de 					referência), ... tinha algum trabalho remunerado 					do qual estava temporariamente afastado por motivo 					de férias, licença, falta voluntária, greve, 						suspensão temporária de contrato de trabalho, 						doença, más condições de tempo ou por outra razão?					*/
+@00168	V404	     2.	/* 4 - Por que motivo ... não exerceu esse 						trabalho remunerado durante pelo menos 1 hora na 					semana  de ../../.. a ../../.. (semana de 						referência)?	*/
+@00170	V405 	     1.	/* 5 - Em ../../.. (último dia da semana de 						referência) fazia quanto tempo que ... estava 						afastado desse trabalho remunerado?	*/
+@00171	V4051	     2.	/* 5 - Em ../../.. (último dia da semana de 						referência)   há quantos dias ... estava afastado  					desse trabalho remunerado?	*/
+@00173	V4052	     2.	/* 5 - Em ../../.. (último dia da semana de 						referência)  há quantos meses ... estava afastado  					desse trabalho remunerado?	*/
+@00175	V4053	     2.	/* 5 - Em ../../.. (último dia da semana de 						referência)  há quantos anos ... estava afastado  					desse trabalho remunerado?	*/
+@00177	V4054	     2.	/* 5 - Em ../../.. (último dia da semana de 						referência)  há quantos meses ... estava afastado  					desse trabalho remunerado?	*/
+@00179	V406	     1.	/* 6 - Quantos trabalhos ... tinha na semana de 					../../.. a ../../.. (semana de referência)?	*/
+@00180	V407A	     3.	/* Variável auxiliar de ocupação (Dia)	*/
+@00183	V408A	     2.	/* Variável auxiliar de atividade (Dia)	*/
+@00185	V409	     1.	/* 9 - Nesse trabalho ... era :	*/
+@00186	V410	     1.	/* 10 - Nesse trabalho ... prestava serviço 						doméstico remunerado em mais de um domicílio?	*/
+@00187	V411	     1.	/* 11 - Esse emprego era no setor :	*/
+@00188	V412 	     1.	/* 12 - Contando com o ...., quantas  pessoas (empregadores, empregados e trabalhadores não 						remunerados) esse empreendimento (negócio, firma, 					empresa, instituição, entidade, etc.) ocupava na 					semana de ../../.. a ../../..(semana de 							referência)?	*/
+@00189	V4121	     1.	/* 12.1 - Contando com o ...., quantas pessoas 	(empregadores, empregados e trabalhadores não 						remunerados) esse empreendimento (negócio, firma, 					empresa, instituição, entidade, etc.) ocupava na 					semana de ../../.. a ../../..(semana de 							referência)?	*/
+@00190	V4122	     2.	/* 12.2 - Contando com o ...., quantas  pessoas (empregadores, empregados e trabalhadores não 						remunerados) esse empreendimento (negócio, firma, 					empresa, instituição, entidade, etc.) ocupava na 					semana de ../../.. a ../../..(semana de 							referência)?	*/
+@00192	V413	     1.	/* 13 - Esse emprego era na área :	*/
+@00193	V414	     1.	/* 14 - Nesse emprego, ... era militar ou  						empregado pelo regime jurídico dos servidores 						públicos?	*/
+@00194	V415	     1.	/* 15 - Nesse trabalho, ... tinha carteira de 						trabalho assinada?    	*/
+@00195	V416	     1.	/* 16 - ... era contribuinte de instituto de 						previdência por esse trabalho?   	*/
+@00196	V417	     1.	/* 17 - Nesse emprego, ... estava  contratado por 					:   	*/ 
+@00197	V418 	     1.	/* 18  - Qual era o rendimento bruto mensal que 					...ganhava habitualmente nesse trabalho?	*/
+@00198	V4182	     9.	/* 18.2 - Qual era o rendimento bruto mensal que 					...ganhava habitualmente nesse trabalho?	*/
+@00207	VI4182	     9.	/* 18.3 - Qual era o rendimento bruto mensal que 					...ganhava habitualmente nesse trabalho?  OBS : 					Variável imputada	*/
+@00216	V4191	     9.	/* 19.1 - Qual foi o rendimento bruto que ... 						recebeu efetivamente nesse trabalho no mês de 						...(mês de referência)?	*/
+@00225	VI4191	     9.	/* 19.2 - Qual foi o rendimento bruto que ... 						recebeu efetivamente nesse trabalho no mês de 						...(mês de referência)?  OBS : Variavel imputada					*/
+@00234	V420	     1.	/* 20 - Nesse trabalho, ... era membro de 						cooperativa (de produção, comercialização ou 						prestação de serviços)?	*/
+@00235	V421	     1.	/* 21 - Neste trabalho, ... tinha pelo menos um 					empregado na semana de ../../..(semana de 						referência)?	*/
+@00236	V422 	     1.	/* 22 - Quantos empregados ... tinha nesse 						trabalho na semana de ../../.. a ../../..(semana 					de referência)?	*/
+@00237	V4221	     1.	/* 22.1 - Quantos empregados ... tinha nesse 						trabalho na semana de ../../.. a ../../.. (semana 					de referência)?	*/
+@00238	V4222	     2.	/* 22.2 - Quantos empregados ...tinha nesse 						trabalho na semana de ../../.. a ../../.. (semana 					de referência)?	*/
+@00240	V4231	     9.	/* 23.1 - Qual era a retirada mensal que ... fazia habitualmente nesse trabalho?	*/
+@00249	VI4231	     9.	/* 23.2 - Qual era a retirada mensal que ... fazia 					habitualmente nesse trabalho? OBS : Variável 						imputada 	*/
+@00258	V4241	     9.	/* 24.1 - Qual foi a retirada mensal que ... fez 					efetivamente nesse trabalho no mês de ...(mês de 					referência)?	*/
+@00267	VI4241	     9.	/* 24.2 - Qual foi a retirada mensal que ... fez 					efetivamente nesse trabalho no mês de ...(mês de 					referência)? OBS : Variável imputada 	*/
+@00276	V425	     1.	/* 25 - ... era contribuinte de instituto de 						previdência por esse trabalho? 	*/
+@00277	V426	     1.	/* 26 - Contando com o  ..., quantas pessoas 						(sócios, empregados e trabalhadores não 							remunerados) esse empreendimento (negócio, firma, 					empresa, instituição, etc.) ocupava na semana de 					../../.. a ../../.. (semana de referência)?	*/
+@00278	V4261	     1.	/* 26.1 - Contando com o  ..., quantas pessoas 						(sócios, empregados e trabalhadores não 							remunerados) esse empreendimento (negócio, firma, 					empresa, instituição, etc.) ocupava na semana de 					../../.. a ../../.. (semana de referência)?	*/
+@00279	V4262	     2.	/* 26.2 - Contando com o  ..., quantas pessoas 						(sócios, empregados e trabalhadores não 							remunerados) esse empreendimento (negócio, firma, 					empresa, instituição, etc.) ocupava na semana de 					../../.. a ../../.. (semana de referência)?	*/
+@00281	V427	     1.	/* 27 - Em ../../..(último dia da semana de  						referência) fazia quanto tempo que ... estava 						nesse trabalho?	*/
+@00282	V4271	     2.	/* 27.1 - Em ../../..(último dia da semana de 						referência) fazia quantos dias que ... estava 						nesse trabalho?	*/
+@00284	V4272	     2.	/* 27.2 - Em ../../..(último dia da semana de  						referência) fazia quantos meses que ... estava 						nesse trabalho?	*/
+@00286	V4273	     2.	/*	27.3 - Em ../../..(último dia da semana de  					referência) fazia quantos anos que ... estava 						nesse trabalho?	*/
+@00288	V4275	     2.	/* 27.5 - Em ../../..(último dia da semana de  						referência) fazia quantos meses que estava nesse 					trabalho?	*/
+@00290	V4274	     2.	/* 27.4 - Em ../../..(último dia da semana de  						referência) fazia quantos anos que ... estava 						nesse trabalho ?	*/
+@00292	V428	     3.	/* 28 - Quantas horas ... trabalhava habitualmente 					por semana nesse trabalho?	*/
+@00295	V429	     3.	/* 29 - Quantas horas ... trabalhou efetivamente 					nesse trabalho na semana de ../../.. a ../../.. 					(semana de referência)?	*/
+@00298	V430 	     1.	/* 30  - Qual era o rendimento mensal que 						...ganhava habitualmente no(s) outro(s) 							trabalho(s) que tinha na semana de ../../.. a 						../../..  (semana de referência)?	*/
+@00299	V4302	     9.	/* 30.2 - Qual era o rendimento mensal que 						...ganhava habitualmente no(s) outro(s) 							trabalho(s) que tinha na semana de ../../.. a 						../../.. (semana de referência)?	*/
+@00308	VI4302	9.	/* 30.2.1 - Qual era o rendimento mensal que 						...ganhava habitualmente no(s) outro(s) 							trabalho(s) que tinha na semana de ../../.. a 						../../.. (semana de referência)? OBS : Variavel 					imputada	*/
+
+@00317	V431 	     1.	/* 31 - Qual foi o rendimento que ... recebeu 						efetivamente no mês de ... (mês de referência) 						nesse(s) outro(s) trabalho(s)?	*/
+@00318	V4312	     9.	/* 31.2  - Qual foi o rendimento que ... recebeu 					efetivamente no mês de ... (mês de referência) 						nesse(s) outro(s) trabalho(s)?	*/
+@00327	VI4312	9.	/* 31.2.1 - Qual foi o rendimento que ... recebeu 					efetivamente no mês de ...(mês de referência) 						nesse(s) outro(s) trabalho(s)? OBS : Variável 						imputada	*/
+@00336	V432	     1.	/* 32 - ... era contribuinte de instituto de 						previdência, federal, estadual ou municipal 						nesse(s) outro(s) (em algum desses outros) 						trabalho(s)?	*/
+@00337	V433	     2.	/* 33 - Quantas horas ... trabalhava habitualmente 					por semana nesse(s) outro(s) trabalho(s)?	*/
+@00339	V434	     2.	/* 34 - Quantas horas ... trabalhou efetivamente 					nesse(s) outro(s) trabalho(s) na semana de 						../../.. a ../../.. (semana de referência)?	*/
+@00341	V435	     1.	/* 35 - ... gostaria de trabalhar além do número 					de horas que efetivamente trabalhou na semana  de 					../../.. a ../../.. (semana de referência)?	*/
+@00342	V436	     1.	/* 36 - Na semana de ../../.. a ../../..(semana de 					referência), ... estava  disponível para trabalhar 					além do número de horas que efetivamente 							trabalhou?	*/
+@00343	V437	     1.	/* 37 - Até o dia ../../..(último dia dos 23 dias 					seguintes à semana de referência), ... estaria 						disponível para trabalhar,  além do  número de 						horas que efetivamente trabalhou na semana de 						../../.. a ../../.. (semana de referência)?	*/
+@00344	V438	     2.	/* 38 - Quantas horas por semana ... poderia 						trabalhar, além das que efetivamente trabalhou na 					semana de ../../.. a ../../.. (semana de 							referência)?	*/
+@00346	V439	     1.	/* 39 - Em ../../.. (último dia da semana de 						referência), ... ainda tinha algum trabalho?  	*/
+@00347	V440	     1.	/* 40 - Depois que saiu do último trabalho que 						teve na  semana de .../.../... a ../.../... 						(semana de referência) tomou alguma providência 					para conseguir trabalho até .../.../... (último 					dia da semana de referência)?	*/
+@00348	V441	     1.	/* 41 - Enquanto estava nesse trabalho, ... tomou 					alguma providência para conseguir um outro 						trabalho no período de ../../.. a ../../..(período 					de referência de 365 dias)?	*/
+@00349	V442	     1.	/* 42 - Antes de ../../.. (primeiro dia da semana 					de  referência), ... teve algum trabalho 							remunerado (em dinheiro, produtos, mercadorias ou 					benefícios)?	*/
+@00350	V443	     1.	/* 43 - Antes de ../../.. (primeiro dia da semana 					de  referência), ... exerceu algum trabalho sem 					remuneração, em ajuda na atividade em ajuda na 						atividade remunerada de pessoa que morava no 						domicílio?	*/
+@00351	V444	     1.	/* 44 - ... saiu de algum trabalho, remunerado ou 					não remunerado, no período de ../../..a 							../../..(período de captação de 358 dias)?	*/
+@00352	V445A	     3.	/* Variável auxiliar de ocupação (Dia)	*/
+@00355	V446A	     2.	/* Variável auxiliar de atividade (Dia)	*/
+@00357	V447	     1.	/* 47-Nesse último trabalho que teve, ... era: */ 
+@00358	V448	     1.	/* 48 - Nesse último emprego ... era militar ou 					empregado  pelo regime jurídico dos servidores 						públicos?	*/
+@00359	V449	     1.	/* 49 - Nesse último trabalho, ... tinha carteira 					de trabalho assinada?   	*/
+@00360	V450	     1.	/* 50 - Nesse último emprego, ... estava  						contratado por :	*/
+@00361	V451	     1.	/* 51 - ... saiu desse último trabalho porque :	*/
+@00362	V452	     1.	/* 52 - Contando até o dia em que saiu, quanto 						tempo ... ficou nesse último trabalho?	*/
+@00363	V4521	     2.	/* 52.1 - Contando até o dia em que saiu, quantos 					meses ... ficou nesse último trabalho?	*/
+@00365	V4522	     2.	/* 52.2 - Contando até o dia em que saiu, quantos 					anos ... ficou nesse último trabalho?	*/
+@00367	V4523	     2.	/* 52.3 - Contando até o dia em que saiu, quantos 					anos ... ficou nesse último trabalho?	*/
+@00369	V4524	     2.	/* 52.4 - Contando até o dia em que saiu, quantos 					meses ... ficou nesse último trabalho?	*/
+@00371	V453	     1.	/* 53 - ... saiu desse último trabalho no período 					de ../../.. a ../../.. (período de captação de 23 					dias)?	*/
+@00372	V454	     1.	/* 54 - Em ../../..(último dia da semana de 						referência), fez quanto tempo que ...  saiu desse  					último trabalho que teve?	*/
+@00373	V4541	     2.	/* 54.1 - Em ../../..(último dia da semana de 						referência), fez quantos meses que ...  saiu desse 					último trabalho que teve?	*/
+@00375	V4542	     2.	/* 54.2 - Em ../../..(último dia da semana de 						referência), fez quantos anos que ...  saiu desse 					último trabalho que teve?	*/
+@00377	V4543	     2.	/* 54.3 - Em ../../..(último dia da semana de 						referência), fez quantos anos que ...  saiu desse  					último trabalho que teve?	*/
+@00379	V4544	     2.	/* 54.4 - Em ../../..(último dia da semana de 						referência), fez quantos meses que ...  saiu desse  					último trabalho que teve?	*/
+@00381	V455	     1.	/* 55 - Depois que saiu deste último trabalho, ... 					tomou alguma providência para conseguir trabalho 					no período de ../../.. a ../../.. (período de 						referência de 365 dias)?	*/
+@00382	V456	     1.	/* 56 - ... tomou alguma providência para 						conseguir trabalho no período de  ../../.. a 						../../..(período de referência de 365 dias)?	*/
+@00383	V457	     2.	/* 57 - Qual foi a última providência que ... 						tomou para conseguir trabalho no período de 						../../.. a ../../.. (período de referência de 365 					dias)?	*/
+@00385	V458	     1.	/* 58 - ... tomou essa providência na semana de 					../../.. a ../../.. (semana de referência)?	*/
+@00386	V459	     1.	/* 59 - ... tomou essa providência  no período de 					../../.. a ../../.. (período de captação de 23 						dias)?	*/
+@00387	V460 	     2.	/* 60 - Em ../../..(último dia da semana de 						referência)  fazia quanto tempo desde que ...tomou 					esta última providência?	*/
+@00389	V461	     2.	/* 61 - Em que data ... tomou esta última 						providência?  DIA	*/
+@00391	V471	     2.	/* 71 - Em que data ... tomou esta  última 						providência?   MÊS	*/
+@00393	V481	     4.	/* 81 - Em que data ... tomou esta última 						providência?  ANO	*/
+@00397	V462	     2.	/* 62 - Por que ... não tomou providência para 						conseguir  trabalho no período de ../../.. a 						../../.. (período de referência de 30 dias)?	*/
+@00399	V463 	     1.	/* 63  - Até a data dessa providência, há quanto 					tempo ...  vinha procurando trabalho sem 							interromper mais de duas semanas seguidas?	*/
+@00400	V4631	     2.	/* 63.1 - Até a data dessa providência, há quantos 					dias ...  vinha procurando trabalho sem 							interromper mais de duas semanas seguidas?	*/
+@00402	V4632	     2.	/* 63.2 - Até a data dessa providência, há quantos 					meses ...  vinha procurando trabalho sem 							interromper mais de duas semanas seguidas?	*/
+@00404	V4633	     2.	/* 63.3 - Até a data dessa providência, há quantos  					anos ...  vinha procurado trabalho sem interromper 					mais de duas semanas seguidas?	*/
+@00406	V4634	     2.	/* 63.4 - Até a data dessa providência, há quantos 					anos ...  vinha procurando trabalho sem 							interromper mais de duas semanas seguidas?	*/
+@00408	V4635	     2.	/* 63.5 - Até a data dessa providência, há quantos 					meses ...  vinha procurando trabalho sem 							interromper mais de duas semanas seguidas?	*/
+@00410	 V464	     1.	/* 64 - Embora não tenha procurado, ... gostaria 					de conseguir um trabalho?	*/
+@00411	V465	     1.	/* 65 - Se conseguisse trabalho, ... poderia 						assumi-lo na semana de ../../..a ../../..(semana 					de referência)?	*/
+@00412	V466	     1.	/* 66 - Se conseguisse trabalho, ... poderia 						assumi-lo até o dia ../../.. (último dia dos 23 					dias seguintes à semana de referência)?	*/
+@00413	V467	     3.	/* 67 - Quantas horas por semana ... poderia 						dedicar ao trabalho, que conseguisse?	*/
+@00416	V468	     1.	/* 68 - A entrevista foi realizada diretamente com  					a própria pessoa moradora?	*/
+@00417	VD1	1. 	/*	Condição de ocupação na semana de referência	*/
+@00418	VD2	1.	  /*	Pessoas Desocupadas	*/
+@00419	VD3	1.	  /*	Pessoas Economicamente Ativas na semana de referência - PEA 	*/
+@00420	VD4	1.	  /*	Pessoas Marginalmente ligadas à PEA na semana de referência	*/
+@00421	VD5	1.	 /*	Pessoas Desencorajadas ( Desalentadas ) na semana de referência	*/
+@00422	VD6	1.	  /*	Pessoas Subocupadas por insuficiência de horas efetivamente trabal	*/
+@00423	VD7	1.	  /*	Pessoas Ocupadas Sub-Remuneradas segundo o rendimento mensa	*/
+@00424	VD8	1.	  /*	Pessoas Ocupadas no período de referência de 365 dias 	*/
+@00425	VD9	1.	  /*	Pessoas que saíram do último trabalho no período de referência de 365 dias*/
+@00426	VD10	1.	  /*	Pessoas desocupadas na semana de referência com procura de trab	*/
+@00427	VD11	1.	  /*	Pessoas Desocupadas na semana de referência com procura de trab	*/
+@00428	VD12	1.	  /*	Pessoas Desocupadas na semana de referência com procura  de trab	*/
+@00429	VD13	1.	  /*	Pessoas Desocupadas no período de referência de 365 dias	*/
+@00430	VD14	1.	  /*	Pessoas Desocupadas na semana de referência com procura de trab	*/
+@00431	VD15	1.	 /*	Pessoas ocupadas na semana de referência segundo a posição na o	*/
+@00432	VD16	1.	 /*	Empregados (exceto trabalhores domésticos e trabalhadores não rem	*/
+@00433	VD17	1.	 /*	Empregados (exceto trabalhores domésticos e trabalhadores não rem	*/
+@00434	VD18	1.	 /*	Empregados (exceto trabalhadores domésticos e trabalhadores não r	*/
+@00435	VD19	1.	 /*	Pessoas ocupadas na semana de referência segundo o número de p	*/
+@00436	VD20	1.	 /*	Pessoas ocupadas na semana de referência segundo as seções de a	*/
+@00437	VD21	1.	 /*	Pessoas ocupadas na semana de referência segundo a contribuição 	*/
+@00438	VD22	1.	 /*	Pessoas ocupadas na semana de referência com procura de trabalho	*/
+@00439	VD23	9.	 /*	Rendimento mensal habitualmente recebido por mês referente ao tra	*/
+@00448	VD24	9.	 /*	Rendimento mensal efetivamente recebido no mês de referência refe	*/
+@00457	VD25	9.	 /*	Rendimento mensal habitualmente recebido de todos os trabalhos	*/
+@00466	VD26	9.	 /*	Rendimento mensal efetivamente recebido no mês de referência de t	*/
+@00475	VD27	3.	 /*	Número de horas habitualmente trabalhadas por semana em todos os	*/
+@00478	VD28	3.	 /*	Número de horas efetivamente trabalhadas na semana de referência 	*/
+@00481	VDAE1	1.	 /*	anos de estudos I	*/
+@00482	VDAE2	1.	 /*	anos de estudos II	*/
+;
